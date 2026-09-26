@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: grpc-client
+  grpc:
+    client:
+      channel:
+        product-service: # must match the "target" above
+          target: static://localhost:9090
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order_service
+    username: postgres
+    password: Avaali1$

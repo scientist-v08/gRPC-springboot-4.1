@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_package = "grpc_server";
+option java_multiple_files = true;
+
+service ProductService {
+  rpc GetProducts (Empty) returns (ProductList) {}
+}
+
+message Empty {}
+
+message ProductList {
+  repeated Product products = 1;
+}
+
+message Product {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+}

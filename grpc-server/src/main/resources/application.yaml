@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: grpc-server
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/product-service
+  grpc:
+    server:
+      port: 9090
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
